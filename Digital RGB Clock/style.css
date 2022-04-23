@@ -1,0 +1,96 @@
+@import url('http://fonts.cdnfonts.com/css/profession');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Profession', sans-serif;
+}
+
+span {
+    font-size: 100px;
+    padding: 5px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+    #0000ff, #00ff00,#ffff00, #ff0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    animation: steam 20s linear infinite;
+}
+
+span.hours {
+    margin-left: 50px ;
+}
+
+.meridiem {
+    margin-left: 20px;
+    margin-right: 50px;
+}
+
+.container {
+    position: relative;
+    background: linear-gradient(0deg, #000, #272727);
+}
+  
+.container:before, .container:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+      #0000ff, #00ff00,#ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+}
+  
+@keyframes steam {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+}
+  
+.container:after {
+    filter: blur(50px);
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Profession', sans-serif;
+}
+
+span {
+  font-size: 40px;
+  padding: 2px;
+  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+  #0000ff, #00ff00,#ffff00, #ff0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400%;
+  animation: steam 20s linear infinite;
+}
+
+}
